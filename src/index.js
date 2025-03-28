@@ -18,6 +18,7 @@ app.use(cookieParser());
 app.use(
   cors({
     origin: "https://chat-app-waaf.onrender.com",
+    methods: ["GET", "POST"],
     credentials: true,
   })
 );
