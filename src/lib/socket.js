@@ -7,7 +7,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: ["https://chat-app-12345.netlify.app"],
+    origin: ["https://chat-app-waaf.onrender.com"],
     credentials: true,
   },
 });
