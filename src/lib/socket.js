@@ -6,12 +6,7 @@ import {corsOptions} from "../config/corsOptions";
 const app = express();
 const server = http.createServer(app);
 
-const io = new Server(server, {
-  cors: {
-    origin: corsOptions.origin,
-    credentials: true,
-  },
-});
+const io = new Server(server, {cors: {origin: corsOptions} });
 
 export function getReceiverSocketId(userId) {
   return userSocketMap[userId];
