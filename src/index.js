@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://chat-app-waaf.onrender.com",
+    origin: "https://chat-app-12345.netlify.app",
     credentials: true,
   })
 );
