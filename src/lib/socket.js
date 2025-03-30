@@ -1,12 +1,17 @@
 import { Server } from "socket.io";
 import http from "http";
 import express from "express";
-import corsOptions from "../config/corsOptions";
+import allowedOrigins from "../config/allowedOrigins";
 
 const app = express();
 const server = http.createServer(app);
 
-const io = new Server(server, {cors: {corsOptions} });
+const io = new Server(server, {
+    cors: {
+        origin: allowedOrigins,
+        credentials: true,
+    }
+ });
 
 export function getReceiverSocketId(userId) {
   return userSocketMap[userId];
